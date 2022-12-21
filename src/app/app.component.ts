@@ -15,4 +15,12 @@ export class AppComponent {
     age :25,
     avatar : 'https://picsum.photos/900'
   }
+
+  toggleButton (){
+    this.btnDisabled = !this.btnDisabled;
+  }
+
+  addYears(){
+    this.person.age +=1
+  }
 }
