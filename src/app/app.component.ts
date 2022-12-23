@@ -26,7 +26,8 @@ export class AppComponent {
 
   onScroll(event: Event){
     const element = event.target as HTMLElement;
-    console.log(element.scrollTop)
+    // console.log(element.scrollTop)
+    console.log(element)
   }
 
   changeName(event: Event){
