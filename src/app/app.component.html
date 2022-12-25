@@ -1,6 +1,27 @@
+<h1>*ngFor</h1>
+<input type="text" required [(ngModel)]="newName" />
+<button (click)="addName()">Add name</button>
+
+<ul>
+  <li *ngFor="let name of names; index as i">
+    {{ i + 1 }} {{ name }}
+    <button (click)="deleteName(i)">Delete</button>
+  </li>
+</ul>
+
+<hr />
+
 <h1>*ngIf</h1>
 <input type="text" required [(ngModel)]="person.name" />
-<p *ngIf="person.name === 'enrique'">Soy el enri</p>
+<input type="number" required [(ngModel)]="person.age" />
+<p *ngIf="person.name === 'enrique' && person.age === 19; else elseBlock">
+  Soy el enri
+</p>
+<p *ngIf="person.age >= 29">Puedes entrar</p>
+
+<ng-template #elseBlock>
+  <p>Bloque Else</p>
+</ng-template>
 
 <hr />
 
