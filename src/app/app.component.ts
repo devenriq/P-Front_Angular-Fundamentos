@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { Product } from "./product.model";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -17,7 +19,39 @@ export class AppComponent {
   }
 
   names: string[]=['enrique','Diana', 'rodrigo'];
-  newName = ''
+  newName = '';
+  products:Product[] = [
+    {
+      name: 'EL mejor juguete',
+      price: 565,
+      image: 'https://picsum.photos/400',
+    },
+    {
+      name: 'Bicicleta casi nueva',
+      price: 356,
+      image: 'https://picsum.photos/401'
+    },
+    {
+      name: 'Colleción de albumnes',
+      price: 34,
+      image: 'https://picsum.photos/402'
+    },
+    {
+      name: 'Mis libros',
+      price: 23,
+      image: 'https://picsum.photos/403'
+    },
+    {
+      name: 'Casa para perro',
+      price: 34,
+      image: 'https://picsum.photos/404'
+    },
+    {
+      name: 'Gafas',
+      price: 3434,
+      image: 'https://picsum.photos/405'
+    }
+  ]
 
   toggleButton (){
     this.btnDisabled = !this.btnDisabled;
