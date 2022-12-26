@@ -1,4 +1,28 @@
-<!-- <h1>ngSwitch</h1>
+<h1>Class & Style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name" />
+
+<hr />
+
+<p class="message-error" [class.invalid]="nameInput2.invalid">
+  El campo es requerido
+</p>
+
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name" />
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">
+  Texto texto text
+</p>
+
+<div class="styles">
+  <div>
+    <input type="text" [(ngModel)]="widthImg" />
+  </div>
+  <div>
+    <img [style.width.px]="widthImg" [src]="person.avatar" />
+  </div>
+</div>
+
+<h1>ngSwitch</h1>
 <input type="text" required [(ngModel)]="person.name" />
 <p *ngIf="person.name === 'enrique'">La persona es enrique</p>
 <div [ngSwitch]="person.name">
@@ -6,7 +30,7 @@
   <p *ngSwitchCase="'juan'">La persona es juan</p>
   <p *ngSwitchCase="'elizabeth'">La persona es elizabeth</p>
   <p *ngSwitchDefault>No hace match</p>
-</div> -->
+</div>
 
 <hr />
 

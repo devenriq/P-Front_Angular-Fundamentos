@@ -8,6 +8,7 @@ import { Product } from "./product.model";
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
+  widthImg = 10;
   name = 'Enrique';
   age = 25;
   img = 'https://picsum.photos/200';
